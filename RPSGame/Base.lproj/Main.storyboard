@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="TEq-yw-O1z">
-                                <rect key="frame" x="20" y="284" width="353" height="259"/>
+                                <rect key="frame" x="20" y="224" width="353" height="259"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FKh-et-j5G">
                                         <rect key="frame" x="0.0" y="0.0" width="169" height="259"/>
@@ -91,7 +91,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IeC-Yi-ExC">
-                                <rect key="frame" x="20" y="583" width="353" height="111"/>
+                                <rect key="frame" x="20" y="523" width="353" height="111"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2CN-1L-qmE">
                                         <rect key="frame" x="0.0" y="0.0" width="111" height="111"/>
@@ -104,6 +104,9 @@
                                         <state key="normal" title="가위">
                                             <color key="titleColor" systemColor="systemGroupedBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="rpsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZzK-1l-qol"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rH-i8-lLi">
                                         <rect key="frame" x="121" y="0.0" width="111" height="111"/>
@@ -113,6 +116,9 @@
                                         <state key="normal" title="바위">
                                             <color key="titleColor" systemColor="systemGroupedBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="rpsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NcL-MN-u38"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gs5-Va-E0w">
                                         <rect key="frame" x="242" y="0.0" width="111" height="111"/>
@@ -122,11 +128,14 @@
                                         <state key="normal" title="보">
                                             <color key="titleColor" systemColor="systemGroupedBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="rpsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C91-HF-y24"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LYq-kw-517">
-                                <rect key="frame" x="20" y="714" width="353" height="45"/>
+                                <rect key="frame" x="20" y="654" width="353" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Evy-9B-Opy">
                                         <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="45"/>
@@ -136,15 +145,21 @@
                                         <state key="normal" title="RESET">
                                             <color key="titleColor" systemColor="systemBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="etu-qh-LgT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fs-Fe-K9R">
                                         <rect key="frame" x="181.66666666666663" y="0.0" width="171.33333333333337" height="45"/>
                                         <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="RESET">
+                                        <state key="normal" title="SELECT">
                                             <color key="titleColor" systemColor="systemBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C5Q-nv-v8l"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -164,10 +179,17 @@
                             <constraint firstItem="vtg-Z1-81f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="cSt-QH-5ME"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LYq-kw-517" secondAttribute="trailing" constant="20" id="gZr-jK-smA"/>
                             <constraint firstItem="vtg-Z1-81f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jT7-lZ-GVm"/>
-                            <constraint firstItem="TEq-yw-O1z" firstAttribute="top" secondItem="vtg-Z1-81f" secondAttribute="bottom" constant="110" id="jaw-ec-NbN"/>
+                            <constraint firstItem="TEq-yw-O1z" firstAttribute="top" secondItem="vtg-Z1-81f" secondAttribute="bottom" constant="50" id="jaw-ec-NbN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TEq-yw-O1z" secondAttribute="trailing" constant="20" id="rzT-8n-bnm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="comChoiceLabel" destination="pfc-ed-CHG" id="qYl-bp-HaE"/>
+                        <outlet property="comImageView" destination="uYR-zG-iWe" id="lBT-gV-bcx"/>
+                        <outlet property="mainLabel" destination="vtg-Z1-81f" id="bIM-GN-75L"/>
+                        <outlet property="myChoiceLabel" destination="kzY-ka-QcH" id="lLG-EL-yVl"/>
+                        <outlet property="myImageView" destination="icK-dn-NRY" id="Q5r-QD-xd2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
