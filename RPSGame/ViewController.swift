@@ -40,7 +40,8 @@ class ViewController: UIViewController {
         // 가위/바위/보(enum) 를 선택해서 그 정보를 저장해야됨
         
         // 버튼의 문자를 가져옴
-        let title = sender.currentTitle!
+        // let title = sender.currentTitle!
+        guard let title = sender.currentTitle else { return }
         print(title)
         
         switch title {
